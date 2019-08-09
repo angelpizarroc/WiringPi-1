@@ -51,12 +51,15 @@
 #endif
 
 /************** OrangePi H3 ***********************/
-#ifdef CONFIG_ORANGEPI_H3
+#if CONFIG_ORANGEPI_H3 || CONFIG_ORANGEPI_H3_ZEROPLUS2
 #define GPIOA_BASE                         (0x01C20000)
 #define GPIO_NUM                           (0x40)
 #define GPIO_BASE_MAP                      (0x01C20800)
 #define MEM_INFO                           (1024)
+#define GPIOL_BASE                         (0x01F02c00)
+#define GPIOL_BASE_MAP                     (0x01F02000)  
 #define MAP_SIZE_L                         (4096 * 2)
+#define GPIO_PWM_OP						   (0x01C21000)
 #endif
 
 /************** OrangePi Zero ***********************/
